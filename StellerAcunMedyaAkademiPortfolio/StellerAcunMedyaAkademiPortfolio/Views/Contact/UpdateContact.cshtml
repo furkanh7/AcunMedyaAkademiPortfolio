@@ -1,0 +1,34 @@
+﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Contact
+@{ ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+<h2>İletişim Bilgisi Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ContactId)
+    <br />
+
+    
+    @Html.TextBoxFor(x => x.Phone, new { @required = "required", id = "input"})
+    <label for="input" alt="Telefon Giriniz" placeholder = "Telefon"></label>
+
+    <br />
+    @Html.TextBoxFor(x => x.Email, new { required = "required", id = "input" })
+    <label for="input" alt="Email Giriniz" placeholder="Email"></label>
+
+    <br />
+
+    @Html.TextBoxFor(x => x.Address, new { required = "required", id = "input" })
+    <label for="input" alt="Adres Giriniz" placeholder="Adres"></label>
+
+    <br />
+    @Html.TextBoxFor(x => x.MapUrl, new { required = "required", id = "input" })
+    <label for="input" alt="Harita Url Giriniz" placeholder="Harita Url"></label>
+
+    <br />
+
+    <button class="btn btn-outline-primary">Güncelle</button>
+
+</form>

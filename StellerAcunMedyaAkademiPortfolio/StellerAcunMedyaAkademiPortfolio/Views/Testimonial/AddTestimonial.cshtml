@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+
+
+    <h3>Yeni Referans Ekleme</h3>
+
+    <br />
+
+
+    <form method="post">
+
+        <br />
+
+        <input id="input" type="text" required name="ImageUrl" />
+        <label for="input" alt="Resim Linkini Giriniz" placeholder="Resim Linki "></label>
+        <br />
+        <input id="input" type="text" required name="NameSurname" />
+        <label for="input" alt="Ad Soyad Giriniz" placeholder="Ad Soyad "></label>
+        <br />
+        <input id="input" type="text" required name="Title" />
+        <label for="input" alt="Unvan Giriniz" placeholder="Unvan "></label>
+        <br />
+        <input id="input" type="text" required name="Description" />
+        <label for="input" alt="Açıklama Giriniz" placeholder="Açıklama "></label>
+
+
+
+        <br />
+
+
+        <button class="btn btn-outline-primary">Kaydet</button>
+
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+

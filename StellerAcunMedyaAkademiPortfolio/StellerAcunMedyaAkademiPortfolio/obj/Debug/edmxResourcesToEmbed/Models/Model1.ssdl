@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StellerAcunMedyaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_About">
+    <Key>
+      <PropertyRef Name="AboutId" />
+    </Key>
+    <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="30" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_Admin">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+    <Property Name="Password" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TBL_Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="MapUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_Feature">
+    <Key>
+      <PropertyRef Name="FeatureId" />
+    </Key>
+    <Property Name="FeatureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Job" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="CvDownloadUrl" Type="nvarchar(max)" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_Message">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="MessageContent" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="TBL_Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+    <Property Name="GitHubUrl" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServiceIconUrl" Type="nvarchar(max)" />
+    <Property Name="ServiceStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_Skill">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="SkillName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_SocialMedia">
+    <Key>
+      <PropertyRef Name="SocialMediaId" />
+    </Key>
+    <Property Name="SocialMediaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="30" />
+    <Property Name="SocialMediaName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Url" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_Testimonial">
+    <Key>
+      <PropertyRef Name="TestimonialId" />
+    </Key>
+    <Property Name="TestimonialId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="30" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="StellerAcunMedyaDBModelStoreContainer">
+    <EntitySet Name="TBL_About" EntityType="Self.TBL_About" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Admin" EntityType="Self.TBL_Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Contact" EntityType="Self.TBL_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Feature" EntityType="Self.TBL_Feature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Message" EntityType="Self.TBL_Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Project" EntityType="Self.TBL_Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Service" EntityType="Self.TBL_Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Skill" EntityType="Self.TBL_Skill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_SocialMedia" EntityType="Self.TBL_SocialMedia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Testimonial" EntityType="Self.TBL_Testimonial" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

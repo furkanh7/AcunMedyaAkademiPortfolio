@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StellerAcunMedyaDBModelStoreContainer" CdmEntityContainer="StellerAcunMedyaDBEntities">
+    <EntitySetMapping Name="TBL_Testimonial">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Testimonial">
+        <MappingFragment StoreEntitySet="TBL_Testimonial">
+          <ScalarProperty Name="TestimonialId" ColumnName="TestimonialId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_About">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_About">
+        <MappingFragment StoreEntitySet="TBL_About">
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AboutId" ColumnName="AboutId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Contact">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Contact">
+        <MappingFragment StoreEntitySet="TBL_Contact">
+          <ScalarProperty Name="MapUrl" ColumnName="MapUrl" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Message">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Message">
+        <MappingFragment StoreEntitySet="TBL_Message">
+          <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Project">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Project">
+        <MappingFragment StoreEntitySet="TBL_Project">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="GitHubUrl" ColumnName="GitHubUrl" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Service">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Service">
+        <MappingFragment StoreEntitySet="TBL_Service">
+          <ScalarProperty Name="ServiceStatus" ColumnName="ServiceStatus" />
+          <ScalarProperty Name="ServiceIconUrl" ColumnName="ServiceIconUrl" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Skill">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Skill">
+        <MappingFragment StoreEntitySet="TBL_Skill">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SocialMedia">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_SocialMedia">
+        <MappingFragment StoreEntitySet="TBL_SocialMedia">
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="SocialMediaName" ColumnName="SocialMediaName" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="SocialMediaId" ColumnName="SocialMediaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Feature">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Feature">
+        <MappingFragment StoreEntitySet="TBL_Feature">
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="CvDownloadUrl" ColumnName="CvDownloadUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="FeatureId" ColumnName="FeatureId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Admin">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Admin">
+        <MappingFragment StoreEntitySet="TBL_Admin">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
