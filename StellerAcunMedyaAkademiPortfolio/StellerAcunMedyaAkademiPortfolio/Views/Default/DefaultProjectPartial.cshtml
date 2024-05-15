@@ -1,0 +1,35 @@
+﻿@model List<StellerAcunMedyaAkademiPortfolio.Models.TBL_Project>
+
+
+
+<section id="portfolio" class="section">
+    <div class="container text-center">
+        <h6 class="subtitle">Projelerim</h6>
+        <h6 class="section-title mb-4">Geliştirdiğim Projelerime Göz Atın</h6>
+        <p class="mb-5 pb-4">Aşagıda daha önce geliştirdiğim projelerden ekran alıntıları ve Github Linkim yer almaktadır</p>
+
+
+        <div class="row">
+             @foreach (var item in Model)
+             {
+
+
+            <div class="col-sm-6">
+                <div class="img-wrapper">
+                    <img src="@item.ImageUrl" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>@item.Title</h5>
+                            <p>@item.Description</p>
+                            <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                            <a href="@item.GitHubUrl"><i class="ti-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+             }
+        </div>
+
+    </div>
+</section>

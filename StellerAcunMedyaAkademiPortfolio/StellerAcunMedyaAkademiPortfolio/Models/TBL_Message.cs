@@ -18,5 +18,6 @@ namespace StellerAcunMedyaAkademiPortfolio.Models
         public string Email { get; set; }
         public string NameSurname { get; set; }
         public string MessageContent { get; set; }
+        public Nullable<bool> isRead { get; set; }
     }
 }

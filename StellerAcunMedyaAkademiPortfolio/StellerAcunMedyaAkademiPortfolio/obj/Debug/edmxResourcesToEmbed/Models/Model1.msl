@@ -37,6 +37,7 @@
     <EntitySetMapping Name="TBL_Message">
       <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Message">
         <MappingFragment StoreEntitySet="TBL_Message">
+          <ScalarProperty Name="isRead" ColumnName="isRead" />
           <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
           <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
           <ScalarProperty Name="Email" ColumnName="Email" />

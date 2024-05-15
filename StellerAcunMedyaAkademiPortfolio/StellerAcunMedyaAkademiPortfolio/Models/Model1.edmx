@@ -52,6 +52,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="100" />
           <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
           <Property Name="MessageContent" Type="nvarchar" MaxLength="300" />
+          <Property Name="isRead" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_Project">
           <Key>
@@ -167,6 +168,7 @@
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MessageContent" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="isRead" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_Project">
           <Key>
@@ -267,6 +269,7 @@
           <EntitySetMapping Name="TBL_Message">
             <EntityTypeMapping TypeName="StellerAcunMedyaDBModel.TBL_Message">
               <MappingFragment StoreEntitySet="TBL_Message">
+                <ScalarProperty Name="isRead" ColumnName="isRead" />
                 <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
                 <ScalarProperty Name="Email" ColumnName="Email" />

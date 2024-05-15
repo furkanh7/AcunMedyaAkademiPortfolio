@@ -44,14 +44,53 @@ namespace StellerAcunMedyaAkademiPortfolio.Controllers
         [HttpPost]
         public ActionResult SendMessage(TBL_Message message)
         {
+
+            message.isRead = false;
             db.TBL_Message.Add(message);
             db.SaveChanges();
             return RedirectToAction("Index");
 
+        }
+        public PartialViewResult DefaultServicePartial()
+        {
+            var values = db.TBL_Service.Where(x=>x.ServiceStatus==true).ToList();
+
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultSkillPartial()
+        {
+            var values = db.TBL_Skill.ToList();
+            return PartialView(values);
 
 
         }
-        
+        public PartialViewResult DefaultProjectPartial()
+        {
+            var values = db.TBL_Project.ToList();
+            return PartialView(values);
+
+
+        }
+        public PartialViewResult DefaultTestimonialPartial()
+        {
+            var values = db.TBL_Testimonial.ToList();
+            return PartialView(values);
+
+
+        }
+        public PartialViewResult DefaultContactInfoPartial()
+        {
+            var values = db.TBL_Contact.ToList();
+            return PartialView(values);
+
+
+        }
+        public PartialViewResult UILayoutFooterPartial()
+        {
+            var values = db.TBL_SocialMedia.ToList();
+            return PartialView(values);
+
+        }
     }
 
 
