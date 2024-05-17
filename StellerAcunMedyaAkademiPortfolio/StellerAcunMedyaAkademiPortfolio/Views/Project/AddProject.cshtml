@@ -1,23 +1,38 @@
 ﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Project
 @{ ViewBag.Title = "AddProject";
-                Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 
-<h2>Yeni Proje Ekleme Sayfası</h2>
+<h2>Yeni İletişim Bilgisi Ekleme Sayfası</h2>
 
-<form method="post">
-    <label>Resim Url</label>
-    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-    <br />
-    <label>Proje Adı</label>
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-    <br />
-    <label>Açıklama</label>
-    @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control" })
-    <br />
-    <label>Github Url</label>
-    @Html.TextBoxFor(x => x.GitHubUrl, new { @class = "form-control" })
-    <br />
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+    <form method="post">
 
-    <button class="btn btn-outline-primary">Kaydet</button>
+        <br />
+        <input id="input" type="text" required name="Description" />
+        <label for="input" alt="Açıklama Giriniz" placeholder="Açıklama"></label>
 
-</form>
+        <br />
+
+        <input id="input" type="text" required name="ImageUrl" />
+        <label for="input" alt="Resim Linki Giriniz" placeholder="Resim Linki"></label>
+        <br />
+
+        <input id="input" type="text" required name="GithubUrl" />
+        <label for="input" alt="Github Linki Giriniz" placeholder="Github Linki "></label>
+        <br />
+
+        <input id="input" type="text" required name="Title" />
+        <label for="input" alt="Başlık Giriniz" placeholder="Başlık"></label>
+        <br />
+
+        <button class="btn btn-outline-primary">Kaydet</button>
+
+    </form>
+
+</body>
+</html>

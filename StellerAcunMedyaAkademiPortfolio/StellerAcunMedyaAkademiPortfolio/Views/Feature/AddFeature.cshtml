@@ -1,26 +1,42 @@
 ﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Feature
 @{ ViewBag.Title = "AddFeature";
-                Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 
-<h2>Yeni Öne Çıkan Alanı Ekle</h2>
+<h3>Yeni Öne Çıkan Alanı Ekle</h3>
 
-<form method="post">
-    <label>Resim Url</label>
-    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-    <br />
-    <label>Başlık</label>
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-    <br />
-    <label>Ad Soyad</label>
-    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
-    <br />
-    <label>Unvan</label>
-    @Html.TextBoxFor(x => x.Job, new { @class = "form-control" })
-    <br />
-    <label>Cv Download Url</label>
-    @Html.TextBoxFor(x => x.CvDownloadUrl, new { @class = "form-control" })
-    <br />
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
 
-    <button class="btn btn-outline-primary">Kaydet</button>
+    <form method="post">
 
-</form>
+        <br />
+
+        <input id="input" type="text" required name="ImageUrl" />
+        <label for="input" alt="Resim Linkini Giriniz" placeholder="Resim Linki "></label>
+        <br />
+        <input id="input" type="text" required name="NameSurname" />
+        <label for="input" alt="Ad Soyad Giriniz" placeholder="Ad Soyad "></label>
+        <br />
+        <input id="input" type="text" required name="Title" />
+        <label for="input" alt="Unvan Giriniz" placeholder="Unvan "></label>
+        <br />
+        <input id="input" type="text" required name="Description" />
+        <label for="input" alt="Açıklama Giriniz" placeholder="Açıklama "></label>
+        <br />
+        <input id="input" type="text" required name="CvDownloadUrl" />
+        <label for="input" alt="Cv Linki Giriniz" placeholder="Cv Linki "></label>
+
+
+
+
+        <button class="btn btn-outline-primary">Kaydet</button>
+
+    </form>
+
+</body>
+</html>
+

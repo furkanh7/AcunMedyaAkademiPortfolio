@@ -1,23 +1,40 @@
 ﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Contact
-@{ ViewBag.Title = "AddContact";
-                Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+@{ 
+    ViewBag.Title = "AddContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
 
 <h2>Yeni İletişim Bilgisi Ekleme Sayfası</h2>
 
-<form method="post">
-    <label>Telefon</label>
-    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
-    <br />
-    <label>Email</label>
-    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
-    <br />
-    <label>Adres</label>
-    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
-    <br />
-    <label>Harita Url</label>
-    @Html.TextBoxFor(x => x.MapUrl, new { @class = "form-control" })
-    <br />
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+    <form method="post">
 
-    <button class="btn btn-outline-primary">Kaydet</button>
+        <br />
+        <input id="input" type="text" required name="Phone" />
+        <label for="input" alt="Telefon Numarası Giriniz" placeholder="Telefon Numarası"></label>
 
-</form>
+        <br />
+        
+        <input id="input" type="text" required name="Email" />
+        <label for="input" alt="Email Giriniz" placeholder="Email"></label>
+        <br />
+        
+        <input id="input" type="text" required name="Address" />
+        <label for="input" alt="Adres Giriniz" placeholder="Adres"></label>
+        <br />
+       
+        <input id="input" type="text" required name="Phone" />
+        <label for="input" alt="Map Url Giriniz" placeholder="Map Url"></label>
+        <br />
+
+        <button class="btn btn-outline-primary">Kaydet</button>
+
+    </form>
+
+</body>
+</html>

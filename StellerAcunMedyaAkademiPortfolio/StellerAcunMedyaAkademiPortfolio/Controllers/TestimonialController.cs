@@ -10,6 +10,8 @@ namespace StellerAcunMedyaAkademiPortfolio.Controllers
     public class TestimonialController : Controller
     {
         StellerAcunMedyaDBEntities db = new StellerAcunMedyaDBEntities();
+        
+
         public ActionResult Index()
         {
             var values = db.TBL_Testimonial.ToList();
@@ -43,12 +45,27 @@ namespace StellerAcunMedyaAkademiPortfolio.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult UpdateTestimonial(int id)
+        {
+            var value = db.TBL_Testimonial.Find(id);
+            return View(value);
+
+        }
+        [HttpPost]
+        public ActionResult UpdateTestimonial(TBL_Testimonial testimonial)
+        {
+           
+            var value = db.TBL_Testimonial.Find(testimonial.TestimonialId);
+            value.NameSurname = testimonial.NameSurname;
+            value.Description = testimonial.Description;
+            value.Title = testimonial.Title;
+            value.ImageUrl = testimonial.ImageUrl;
+            db.SaveChanges();
+            return RedirectToAction("Index");
 
 
 
-
-
-
+        }
 
 
 

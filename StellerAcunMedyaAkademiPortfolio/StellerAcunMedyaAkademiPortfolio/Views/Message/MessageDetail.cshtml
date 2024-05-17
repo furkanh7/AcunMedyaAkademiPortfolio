@@ -1,39 +1,27 @@
-﻿@model List<StellerAcunMedyaAkademiPortfolio.Models.TBL_Message>
+﻿﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Message
 @{
     ViewBag.Title = "MessageDetail";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Mesaj Detayları</h2>
+<h3>Mesaj Detayları</h3>
 
 <table class="table table-striped">
     <tr>
-        <th>ADsoyad</th>
-        <th>@Model.NameS</th>
+        <th>Gönderen Ad Soyad:</th>
+        <td>@Model.NameSurname</td>
+    </tr>
 
-
-    </tr>  
     <tr>
-        <th>ADsoyad</th>
-        <th></th>
+        <th>Gönderen Email:</th>
+        <td>@Model.Email</td>
+    </tr>
 
-
-    </tr>   
     <tr>
-        <th>ADsoyad</th>
-        <th></th>
-
-
-    </tr>   <tr>
-        <th>ADsoyad</th>
-        <th></th>
-
-
+        <th>Mesaj içeriği:</th>
+        <td>@Model.MessageContent</td>
     </tr>
 
 
 
-
-
 </table>
-

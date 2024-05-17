@@ -17,13 +17,20 @@ namespace StellerAcunMedyaAkademiPortfolio.Controllers
            
             var values = db.TBL_Message.Where(x => x.isRead == false).ToList();
             return View(values);
-        } public ActionResult MessageDetail(int id)
+        }
+        public ActionResult MessageDetail(int id)
         {
             
             var message = db.TBL_Message.Find(id);
             message.isRead = true;
             db.SaveChanges();
             return View(message);
+        }
+        public ActionResult ReadMessages()
+        {
+            var values = db.TBL_Message.Where(x => x.isRead == true).ToList();
+            return View(values);
+
         }
     }
 }

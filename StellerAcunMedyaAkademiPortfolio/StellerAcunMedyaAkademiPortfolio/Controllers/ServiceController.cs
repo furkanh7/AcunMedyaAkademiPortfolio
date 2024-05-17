@@ -54,7 +54,7 @@ namespace StellerAcunMedyaAkademiPortfolio.Controllers
 
             var value = db.TBL_Service.Find(service.ServiceId);
             value.ServiceName = service.ServiceName;
-            value.ServiceStatus = service.ServiceStatus;
+            value.ServiceStatus = true;
             value.ServiceIconUrl = service.ServiceIconUrl;
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -1,8 +1,8 @@
-﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Feature
-@{ ViewBag.Title = "UpdateFeature";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
-
-<h3>Öne Çıkan Alanı Güncelleme Sayfası</h3>
+﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Testimonial 
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
 
 <html>
 <head>
@@ -12,15 +12,16 @@
 <body>
 
 
+    <h3>Referans Güncelleme</h3>
 
+    <br />
 
 
     <form method="post">
 
+        <input type="hidden" name="TestimonialId" value="@Model.TestimonialId" />
         <br />
-
-        <input type="hidden" name="FeaturId" value="@Model.FeatureId" />
-        <br />
+        
 
         <input id="input" type="text" required name="ImageUrl" value="@Model.ImageUrl" />
         <label for="input" alt="Resim Linkini Giriniz" placeholder="Resim Linki "></label>
@@ -31,18 +32,18 @@
         <input id="input" type="text" required name="Title" value="@Model.Title" />
         <label for="input" alt="Unvan Giriniz" placeholder="Unvan "></label>
         <br />
-        <input id="input" type="text" required name="Job" value="@Model.Job" />
-        <label for="input" alt="Açıklama Giriniz" placeholder="Açıklama "></label>
-        <br />
-        <input id="input" type="text" required name="CvDownLoadUrl" value="@Model.CvDownloadUrl" />
+        <input id="input" type="text" required name="Description" value="@Model.Description" />
         <label for="input" alt="Açıklama Giriniz" placeholder="Açıklama "></label>
 
 
 
         <br />
+
 
         <button class="btn btn-outline-primary">Güncelle</button>
+
     </form>
 
 </body>
 </html>
+

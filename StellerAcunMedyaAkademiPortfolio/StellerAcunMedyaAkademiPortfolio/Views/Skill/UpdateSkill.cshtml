@@ -1,0 +1,48 @@
+﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Skill
+ @{ 
+  ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Yetenek Güncelleme Sayfası</h3>
+
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+
+
+
+
+
+    <form method="post">
+
+
+        @Html.HiddenFor(x=>x.SkillId)
+        <br />
+        <input id="input" type="text" required name="SkillName" value="@Model.SkillName" />
+        <label for="input" alt="Yetenek Adı Giriniz" placeholder="Yetenek Adı "></label>
+        <br />
+        <input id="input" type="text" required name="Title" value="@Model.Title" />
+        <label for="input" alt="Yetenek Başlığı Giriniz" placeholder="Yetenek Başlığı "></label>
+        <br />
+        <input id="input" type="text" required name="Description" value="@Model.Description" />
+        <label for="input" alt="Yetenek Açıklaması Giriniz" placeholder="Yetenek Açıklaması "></label>
+        <br />
+        <input id="input" type="text" required name="Value" value="@Model.Value" />
+        <label for="input" alt="Yüzdelik Değe Giriniz" placeholder="Yüzdelik Değer "></label>
+        <br />
+
+
+
+
+
+        <button class="btn btn-outline-primary">Güncelle</button>
+
+    </form>
+
+</body>
+</html>
+

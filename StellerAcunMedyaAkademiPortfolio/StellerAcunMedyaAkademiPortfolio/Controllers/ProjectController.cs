@@ -40,6 +40,29 @@ namespace StellerAcunMedyaAkademiPortfolio.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            [HttpGet]       
+            public ActionResult UpdateProject(int id)
+            {
+            var value = db.TBL_Project.Find(id);
+            return View(value);
+           
+
+            }
+            [HttpPost]
+            public ActionResult UpdateProject(TBL_Project project)
+            {
+            var value = db.TBL_Project.Find(project.ProjectId);
+            value.Description = project.Description;
+            value.ImageUrl = project.ImageUrl;
+            value.GitHubUrl = project.GitHubUrl;
+            value.Title = project.Title;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        
+            }
+
+
 
         }
     }

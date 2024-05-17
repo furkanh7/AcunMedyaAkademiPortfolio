@@ -1,23 +1,42 @@
-﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Service
+﻿@model List<StellerAcunMedyaAkademiPortfolio.Models.TBL_Service>
 @{
     ViewBag.Title = "AddService";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h3>Yeni Hizmet Ekleme Sayfası</h3>
-
-<form method="post">
-
-  
 
 
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+
+
+    <h3>Yeni Hizmet Ekleme Sayfası</h3>
+
+    <br />
+
+
+    <form method="post">
+
+        <br />
+
+        <input id="input" type="text" required name="ServiceName" />
+        <label for="input" alt="Hizmet Adı Giriniz" placeholder="Hizmet Adı "></label>
+        <br />
+        <input id="input" type="text" required name="ServiceIconUrl" />
+        <label for="input" alt="Hizmet İkonu Giriniz" placeholder="Hizmet İkonu "></label>
+        <br />
+       
 
 
 
 
+        <button class="btn btn-outline-primary">Kaydet</button>
 
+    </form>
 
-
-
-</form>
-
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Project
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+
+
+    <h3> Proje Güncelleme Sayfası</h3>
+
+    <br />
+
+
+    <form method="post">
+
+        <input type="hidden" name="ProjectId" value="@Model.ProjectId" />
+        <br />
+
+        <input id="input" type="text" required name="Description" value="@Model.Description" />
+        <label for="input" alt="Açıklama Giriniz" placeholder="Açıklama "></label>
+        <br />
+        <input id="input" type="text" required name="ImageUrl" value="@Model.ImageUrl" />
+        <label for="input" alt="Resim Linki Giriniz" placeholder="Resim Linki "></label>
+        <br />
+        <input id="input" type="text" required name="GitHubUrl" value="@Model.GitHubUrl" />
+        <label for="input" alt="Github Linki Giriniz" placeholder="Github Linki "></label>
+        <br />
+        <input id="input" type="text" required name="Title" value="@Model.Title" />
+        <label for="input" alt="Başlık Giriniz" placeholder="Başlık "></label>
+        <br />
+
+
+
+
+
+
+
+        <button class="btn btn-outline-primary">Güncelle</button>
+
+    </form>
+
+</body>
+</html>

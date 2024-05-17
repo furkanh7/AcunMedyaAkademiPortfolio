@@ -1,0 +1,45 @@
+﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_SocialMedia
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Sosyal Medya Güncelleme Sayfası</h3>
+
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+
+
+
+
+
+    <form method="post">
+
+        <input type="hidden" name="SocialMediaId" value="@Model.SocialMediaId" />
+        <br />
+
+        <input id="input" type="text" required name="SocialMediaName" value="@Model.SocialMediaName" />
+        <label for="input" alt="Sosyal Medya Adı Giriniz" placeholder="Sosyal Medya Adı "></label>
+
+        <br />
+        <input id="input" type="text" required name="Url" value="@Model.Url" />
+        <label for="input" alt="Sosyal Medya Linkini Giriniz" placeholder="Sosyal Medya Linki "></label>
+        <br />
+        <input id="input" type="text" required name="Icon" value="@Model.Icon" />
+        <label for="input" alt="Sosyal Medya İkonu Giriniz" placeholder="Sosyal Medya İkonu "></label>
+        <br />
+
+
+
+
+
+        <button class="btn btn-outline-primary">Güncelle</button>
+
+    </form>
+
+</body>
+</html>

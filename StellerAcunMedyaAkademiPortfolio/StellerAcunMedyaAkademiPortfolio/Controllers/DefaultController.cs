@@ -91,6 +91,14 @@ namespace StellerAcunMedyaAkademiPortfolio.Controllers
             return PartialView(values);
 
         }
+
+        public PartialViewResult DefaultSocialMediaPartial()
+        {
+
+            var values = db.TBL_SocialMedia.ToList();
+            return PartialView(values);
+
+        }
     }
 
 

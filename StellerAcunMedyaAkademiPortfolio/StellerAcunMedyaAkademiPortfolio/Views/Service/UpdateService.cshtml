@@ -1,0 +1,42 @@
+﻿@model StellerAcunMedyaAkademiPortfolio.Models.TBL_Service
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<html>
+<head>
+    <title>CSHTML'e CSS Ekleme</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+
+
+    <h3> Hizmet Güncelleme Sayfası</h3>
+
+    <br />
+
+
+    <form method="post">
+       
+        <input type="hidden" name="ServiceId" value="@Model.ServiceId" />
+        <br />
+
+        <input id="input" type="text" required name="ServiceName"  value="@Model.ServiceName"/>
+        <label for="input" alt="Hizmet Adı Giriniz" placeholder="Hizmet Adı "></label>
+        <br />
+        <input id="input" type="text" required name="ServiceIconUrl"  value="@Model.ServiceIconUrl"/>
+        <label for="input" alt="Hizmet İkonu Giriniz" placeholder="Hizmet İkonu "></label>
+        <br />
+
+
+
+
+
+        <button class="btn btn-outline-primary">Güncelle</button>
+
+    </form>
+
+</body>
+</html>
+
