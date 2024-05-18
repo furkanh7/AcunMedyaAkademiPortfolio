@@ -1,22 +1,20 @@
 ﻿@model List<StellerAcunMedyaAkademiPortfolio.Models.TBL_Skill>
 
 
-<section class="section">
+<section class="section" id="skill">
     <div class="container text-center">
-        <h6 class="subtitle">Hakim Olduğum Tekknolojiler</h6>
+        <h6 class="subtitle">Hakim Olduğum Teknolojiler</h6>
         @foreach (var item in Model)
         {
 
 
         <h6 class="section-title mb-4">@item.Title</h6>
-        <p class="mb-5 pb-4">@item.Description</p>
+        <p>@item.Description</p>
         }
         <div class="row text-left">
 
             @foreach (var item in Model)
             {
-
-
             <div class="col-sm-6">
                 <h6 class="mb-3">@item.SkillName</h6>
                 <div class="progress">
